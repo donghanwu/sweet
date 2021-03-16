@@ -1,0 +1,74 @@
+@import '_starter';
+
+.btn {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 4px 8px;
+    text-decoration: none;
+    border: 1px #e5efe6 solid;
+    color: $default;
+    transition: all .3s;
+    font-size: rem(18px);
+    background-color: $white;
+    
+    @include media-breakpoint-up(xl) {
+
+        &:not(.act):hover,
+        &:not(.act).focus-visible:focus {
+            background-color: lighten($secondary, 20);
+        }
+    }
+
+    &.disabled {
+        background: #eee !important;
+        color: #aaa;
+        pointer-events: none;
+    }
+    &.rounded-top{
+        border-radius: .25rem .25rem 0 0;
+    }
+}
+
+$arr:('primary':$primary, 'secondary':$secondary);
+
+@each $name,
+$color in $arr {
+    .btn-#{$name} {
+        color: #fff;
+        background-color: $color;
+        border: none;
+
+        @include media-breakpoint-up(xl) {
+
+            &:not(.act):hover,
+            &:not(.act).focus-visible:focus {
+                background-color: lighten($color, 5);
+            }
+        }
+    }
+
+    .btn-outline-#{$name} {
+        color: $color;
+        border-color: $color !important;
+
+        &.act {
+            color: #fff !important;
+            background-color: $color;
+        }
+
+        @include media-breakpoint-up(xl) {
+
+            &:not(.act):hover,
+            &:not(.act).focus-visible:focus {
+                color: $color;
+                background-image: none;
+                @if($name=='success'){
+                    background-color: lighten($color, 70);
+                } @else{
+                    background-color: lighten($color, 25);
+                }
+            }
+        }
+    }
+}

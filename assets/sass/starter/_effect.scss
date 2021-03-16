@@ -1,0 +1,19 @@
+﻿@charset "utf-8";
+.drop-shadow {
+    position: relative;
+    &:before,
+    &:after{
+    	content: "";
+	    position: absolute;
+	    z-index: -2;
+    }
+}
+
+.curved-bottom:before {
+    top: 90%;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+	@include box-shadow(rgba(#000,0.8) 0 0 5px 1px);
+    border-radius: 50% / 50%;
+}

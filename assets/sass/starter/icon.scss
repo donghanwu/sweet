@@ -1,0 +1,29 @@
+@import "_starter";
+
+i.icon {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+        line-height: 1 !important;
+        @extend %iconfont-base;
+
+        .ie & {
+            display: flex;
+            width: initial;
+            min-width: 16px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+
+$list:('heart-test','video','photo','info','triangle','close','star');
+
+@each $var in $list {
+    .icon-#{$var}:before {
+        content: iconfont-char("#{$var}");
+    }
+}

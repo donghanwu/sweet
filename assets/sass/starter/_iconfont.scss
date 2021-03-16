@@ -1,0 +1,328 @@
+%iconfont-base {
+	font-family: "iconfont";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin iconfont-base {
+	font-family: "iconfont";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+@function iconfont-char($filename) {
+	$char: "";
+
+	@if $filename == accommodation {
+		$char: "\E001";
+	}
+	@if $filename == add {
+		$char: "\E002";
+	}
+	@if $filename == adv {
+		$char: "\E003";
+	}
+	@if $filename == arrow-down {
+		$char: "\E004";
+	}
+	@if $filename == arrow-left {
+		$char: "\E005";
+	}
+	@if $filename == arrow-right {
+		$char: "\E006";
+	}
+	@if $filename == arrow-up {
+		$char: "\E007";
+	}
+	@if $filename == attraction {
+		$char: "\E008";
+	}
+	@if $filename == audio {
+		$char: "\E009";
+	}
+	@if $filename == avatar {
+		$char: "\E00A";
+	}
+	@if $filename == back-all {
+		$char: "\E00B";
+	}
+	@if $filename == backpack {
+		$char: "\E00C";
+	}
+	@if $filename == bike {
+		$char: "\E00D";
+	}
+	@if $filename == bus {
+		$char: "\E00E";
+	}
+	@if $filename == calander {
+		$char: "\E00F";
+	}
+	@if $filename == calendar {
+		$char: "\E010";
+	}
+	@if $filename == car {
+		$char: "\E011";
+	}
+	@if $filename == check {
+		$char: "\E012";
+	}
+	@if $filename == circle-wifi {
+		$char: "\E013";
+	}
+	@if $filename == clock-fill {
+		$char: "\E014";
+	}
+	@if $filename == clock {
+		$char: "\E015";
+	}
+	@if $filename == close {
+		$char: "\E016";
+	}
+	@if $filename == collapse {
+		$char: "\E017";
+	}
+	@if $filename == cross {
+		$char: "\E018";
+	}
+	@if $filename == delete {
+		$char: "\E019";
+	}
+	@if $filename == distance {
+		$char: "\E01A";
+	}
+	@if $filename == dollar {
+		$char: "\E01B";
+	}
+	@if $filename == double-arrow {
+		$char: "\E01C";
+	}
+	@if $filename == download {
+		$char: "\E01D";
+	}
+	@if $filename == duplicate {
+		$char: "\E01E";
+	}
+	@if $filename == edit {
+		$char: "\E01F";
+	}
+	@if $filename == expand {
+		$char: "\E020";
+	}
+	@if $filename == fb-share {
+		$char: "\E021";
+	}
+	@if $filename == fb {
+		$char: "\E022";
+	}
+	@if $filename == first {
+		$char: "\E023";
+	}
+	@if $filename == flag {
+		$char: "\E024";
+	}
+	@if $filename == gift {
+		$char: "\E025";
+	}
+	@if $filename == group {
+		$char: "\E026";
+	}
+	@if $filename == heart-fill {
+		$char: "\E027";
+	}
+	@if $filename == heart-stroke {
+		$char: "\E028";
+	}
+	@if $filename == heart-test {
+		$char: "\E029";
+	}
+	@if $filename == heart {
+		$char: "\E02A";
+	}
+	@if $filename == help {
+		$char: "\E02B";
+	}
+	@if $filename == here {
+		$char: "\E02C";
+	}
+	@if $filename == info {
+		$char: "\E02D";
+	}
+	@if $filename == information {
+		$char: "\E02E";
+	}
+	@if $filename == instagram {
+		$char: "\E02F";
+	}
+	@if $filename == joy {
+		$char: "\E030";
+	}
+	@if $filename == last {
+		$char: "\E031";
+	}
+	@if $filename == line {
+		$char: "\E032";
+	}
+	@if $filename == link-out {
+		$char: "\E033";
+	}
+	@if $filename == link {
+		$char: "\E034";
+	}
+	@if $filename == list {
+		$char: "\E035";
+	}
+	@if $filename == livecam {
+		$char: "\E036";
+	}
+	@if $filename == locate {
+		$char: "\E037";
+	}
+	@if $filename == location-fill {
+		$char: "\E038";
+	}
+	@if $filename == location {
+		$char: "\E039";
+	}
+	@if $filename == magnifier {
+		$char: "\E03A";
+	}
+	@if $filename == mail {
+		$char: "\E03B";
+	}
+	@if $filename == map {
+		$char: "\E03C";
+	}
+	@if $filename == news {
+		$char: "\E03D";
+	}
+	@if $filename == ok {
+		$char: "\E03E";
+	}
+	@if $filename == pano {
+		$char: "\E03F";
+	}
+	@if $filename == parking {
+		$char: "\E040";
+	}
+	@if $filename == pause {
+		$char: "\E041";
+	}
+	@if $filename == pennant {
+		$char: "\E042";
+	}
+	@if $filename == photo {
+		$char: "\E043";
+	}
+	@if $filename == play {
+		$char: "\E044";
+	}
+	@if $filename == printer {
+		$char: "\E045";
+	}
+	@if $filename == process {
+		$char: "\E046";
+	}
+	@if $filename == quest {
+		$char: "\E047";
+	}
+	@if $filename == rail {
+		$char: "\E048";
+	}
+	@if $filename == reload {
+		$char: "\E049";
+	}
+	@if $filename == schedule {
+		$char: "\E04A";
+	}
+	@if $filename == service {
+		$char: "\E04B";
+	}
+	@if $filename == shoe {
+		$char: "\E04C";
+	}
+	@if $filename == shop {
+		$char: "\E04D";
+	}
+	@if $filename == sleep {
+		$char: "\E04E";
+	}
+	@if $filename == sort {
+		$char: "\E04F";
+	}
+	@if $filename == speaker {
+		$char: "\E050";
+	}
+	@if $filename == star {
+		$char: "\E051";
+	}
+	@if $filename == street {
+		$char: "\E052";
+	}
+	@if $filename == tag {
+		$char: "\E053";
+	}
+	@if $filename == tasty {
+		$char: "\E054";
+	}
+	@if $filename == tel {
+		$char: "\E055";
+	}
+	@if $filename == ticket {
+		$char: "\E056";
+	}
+	@if $filename == tile {
+		$char: "\E057";
+	}
+	@if $filename == tour {
+		$char: "\E058";
+	}
+	@if $filename == transport {
+		$char: "\E059";
+	}
+	@if $filename == triangle {
+		$char: "\E05A";
+	}
+	@if $filename == twitter {
+		$char: "\E05B";
+	}
+	@if $filename == umbrella {
+		$char: "\E05C";
+	}
+	@if $filename == upload {
+		$char: "\E05D";
+	}
+	@if $filename == uv {
+		$char: "\E05E";
+	}
+	@if $filename == video {
+		$char: "\E05F";
+	}
+	@if $filename == view {
+		$char: "\E060";
+	}
+	@if $filename == warn {
+		$char: "\E061";
+	}
+	@if $filename == weibo {
+		$char: "\E062";
+	}
+	@if $filename == whiteboard {
+		$char: "\E063";
+	}
+	@if $filename == youtube {
+		$char: "\E064";
+	}
+
+	@return $char;
+}

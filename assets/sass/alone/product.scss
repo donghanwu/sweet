@@ -1,0 +1,23 @@
+.header {
+    border:1px red solid;
+    position: fixed;
+    width: 100%;
+    
+}
+.header-logo{
+    width: 100%;
+    height: 500px;
+    // position:relative ;
+    background-color: red;
+    border: none;
+    top: 100px;
+}
+.nav-bar{
+    position: fixed;
+    display: flex;
+    // top:  30px;
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    
+}

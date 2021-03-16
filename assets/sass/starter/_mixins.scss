@@ -1,0 +1,121 @@
+$base-font-size: 16px;
+$sprites-adjust-map: ();
+@each $var in $spritesheet-sprites {
+    $new: (
+        (
+            nth($var, 10): $var
+        )
+    );
+    $sprites-adjust-map: map-merge($sprites-adjust-map, $new);
+}
+@mixin sp($name) {
+    $sprite: map-get($sprites-adjust-map, $name);
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-image: url($spritesheet-image);
+    @include sprite-position($sprite);
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+}
+
+@mixin svg-sp($width, $index) {
+    width: $width;
+    height: $width;
+    background: url(../images/global/svg-sprite.svg) 0 (-$width * $index)
+        no-repeat;
+    background-size: $width auto;
+}
+
+@mixin move-to-baseline(
+    $font-size,
+    $line: lines-for-font-size($font-size),
+    $top: false
+) {
+    position: relative;
+    $move: (
+            $base-line-height * $line - $font-size * (0.7 - $font-size / 1000px)
+        ) / 2 / $font-size * 1em;
+    @if $top == top {
+        top: -$move;
+    } @else {
+        top: $move;
+    }
+}
+
+@mixin desktop-width() {
+    min-width: 1100px;
+    width: 85%;
+    max-width: 1260px;
+}
+@mixin desktop-page-content-width() {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin rb() {
+    border: 1px red solid !important;
+}
+@mixin rect() {
+    background: rgba(red, 0.3);
+}
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+@function rem($px, $base: $base-font-size) {
+    @return ($px / $base) * 1rem;
+}
+@mixin font-size-rem($px, $base: $base-font-size) {
+    font-size: ($px / $base) * 1rem;
+}
+@mixin scrimGradient($startColor: $color-black, $direction: 'to bottom') {
+
+  $scrimCoordinates: (
+    0: 1,
+    19: 0.738,
+    34: 0.541,
+    47: 0.382,
+    56.5: 0.278,
+    65: 0.194,
+    73: 0.126,
+    80.2: 0.075,
+    86.1: 0.042,
+    91: 0.021,
+    95.2: 0.008,
+    98.2: 0.002,
+    100: 0
+  );
+
+  $hue: hue($startColor);
+  $saturation: saturation($startColor);
+  $lightness: lightness($startColor);
+  $stops: ();
+
+  @each $colorStop, $alphaValue in $scrimCoordinates {
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage($colorStop/100);
+    $stops: append($stops, $stop, comma);
+  }
+
+  background: linear-gradient(unquote($direction), $stops);
+
+}
+@function random-color() {
+    $red: random(256)-1;
+    $green: random(256)-1;
+    $blue: random(256)-1;
+    @return rgba($red, $green, $blue, 1);
+}
+
+@function padding-zero($num) {
+    @if ($num<10) {
+        $num: 0#{$num};
+    }
+    @return $num;
+}
+
+@function column-width-calc($columnNums, $gap) {
+    @return calc((100% - #{$gap} * #{$columnNums - 1}) / #{$columnNums});
+}

@@ -1,0 +1,356 @@
+@import '_starter';
+$fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 46, 48, 52, 56, 60, 64);
+
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    $lh: 24px;
+
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        @each $fz in $fontsize-list {
+            .fz#{$infix}-#{$fz}px {
+                font-size: rem(1px*$fz) !important;
+
+                @if $fz>18 and $fz < 24 {
+                    $lh: 1.44;
+                }
+
+                @if $fz>24 {
+                    $lh: 1.33;
+                }
+
+                @if $fz>36 {
+                    $lh: 1.15;
+                }
+
+                line-height: $lh;
+            }
+        }
+
+        @for $i from 1 through 16 {
+            .h#{$infix}-#{$i} {
+                height: $i*8px !important;
+            }
+
+            .w#{$infix}-#{$i} {
+                width: $i*8px !important;
+            }
+        }
+
+        .h#{$infix}-4px {
+            height: 4px !important;
+        }
+
+        .w#{$infix}-4px {
+            width: 4px !important;
+        }
+
+        .h#{$infix}-12px {
+            height: 12px !important;
+        }
+
+        .w#{$infix}-12px {
+            width: 12px !important;
+        }
+
+        .h#{$infix}-20px {
+            height: 20px !important;
+        }
+
+        .w#{$infix}-20px {
+            width: 20px !important;
+        }
+    }
+}
+
+
+
+.rb {
+    border: 1px red solid !important;
+}
+
+.bg-placeholder {
+    background-image: linear-gradient(45deg, #c5e1a5 0, #f2e7bc 100%);
+}
+
+.bg-black-50 {
+    background-color: rgba(#000, .5);
+}
+
+.bg-white-90 {
+    background-color: rgba(#fff, .9);
+}
+
+.bg-primary-20 {
+    background-color: rgba($primary, .2) !important;
+}
+
+.bg-gray-200 {
+    background-color: $gray-200 !important;
+}
+
+.bg-default-80 {
+    background-color: rgba($default, .8);
+}
+
+.bg-notice {
+    background-color: #fff5d0;
+}
+
+.text-shadow {
+    text-shadow: 0 0 10px rgba(#000, .2);
+}
+
+.max-readable-friendly {
+    width: 100%;
+    max-width: 800px;
+}
+
+.max-width-xl,
+.maw-1280px {
+    max-width: 1280px;
+}
+
+.max-width-xl-with-padding,
+.maw-1280px-with-padding {
+    @include media-breakpoint-up(xl) {
+        padding-left: calc(50% - 640px) !important;
+        padding-right: calc(50% - 640px) !important;
+    }
+}
+
+.maw-960px {
+    max-width: 960px;
+}
+
+.w-180px {
+    width: 180px;
+}
+
+.w-320px {
+    width: 320px;
+}
+
+.w-400px {
+    width: 400px;
+}
+
+.w-xl-200px {
+    @include media-breakpoint-up(xl) {
+        width: 200px;
+    }
+}
+
+.border-width-4px {
+    border-width: 4px !important;
+}
+
+.border-special {
+    border-top: 4px #497b26 solid;
+
+    @include media-breakpoint-up(xl) {
+        border-top-width: 8px;
+    }
+}
+
+.shadow-dark {
+    box-shadow: rgba(#000, 0.75) 0px 4px 4px 0px;
+}
+
+[class*='line-clamp'] {
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.line-clamp-2 {
+    -webkit-line-clamp: 2;
+    max-height: 48px;
+}
+
+.line-clamp-3 {
+    -webkit-line-clamp: 3;
+    max-height: 72px !important;
+}
+
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+
+.miw-0 {
+    min-width: 0;
+}
+
+.fill-parent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.absolute-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.absolute-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.absolute-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.absolute-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.pointer-events-auto {
+    pointer-events: auto;
+}
+
+.z-100 {
+    z-index: 100;
+}
+
+
+.lh-initial {
+    line-height: initial !important;
+}
+
+
+.child-rb>* {
+    @include rb;
+}
+
+.fit-cover {
+    object-fit: cover !important;
+}
+
+.fit-contain {
+    object-fit: contain !important;
+}
+
+
+.mb-0-last:last-child {
+    margin-bottom: 0 !important;
+}
+
+.trs-all {
+    transition: transform .3s, opacity .3s;
+}
+
+.hover-bg-secondary-10 {
+    @include media-breakpoint-up(xl) {
+        transition: all .3s;
+
+        &:hover,
+        &:focus {
+            background-color: $secondary !important;
+        }
+    }
+}
+
+.order-list {
+    list-style: decimal;
+}
+
+.unorder-list {
+    list-style: disc;
+}
+
+.op-1 {
+    opacity: 1;
+}
+
+.op-0 {
+    opacity: 0;
+}
+
+.op-act-1 {
+    opacity: 0;
+
+    .act & {
+        opacity: 1;
+    }
+}
+.translate-x-n100 {
+    transform: translateX(-100%);
+}
+.scale-0 {
+    transform: scale(0);
+}
+
+.spot-info-blk {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+
+    @include media-breakpoint-up(md) {
+        width: 560px;
+        height: auto;
+        left: auto;
+        right: 0;
+        max-height: calc(100vh - 64px - 64px);
+    }
+}
+
+.overflow-y-auto {
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.thumb-frame {
+    .thumb {
+        opacity: 0;
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+        transition: opacity .5s, filter .5s, -webkit-filter .5s, transform .3s;
+
+        &.lazyloaded {
+            opacity: 1;
+            -webkit-filter: none;
+            filter: none;
+        }
+    }
+}
+
+.user-select-none {
+    user-select: none
+}
+
+.rotate-270deg {
+    transform: rotate(270deg)
+}
+.abc {
+    border: 10px solid #000;
+    background: blue;
+}

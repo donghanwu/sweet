@@ -1,0 +1,67 @@
+// import all things
+//@import "compass";
+//@import "susy";
+
+//sprite
+@import 'sprite';
+
+// bootstrap
+@import "../bootstrap/functions";
+@import '../bootstrap/variables';
+@import "../bootstrap/mixins";
+
+// starter variables
+@import 'variables';
+
+// starter iconfont
+@import 'iconfont';
+
+// starter mixins
+@import 'mixins';
+
+
+// media settings
+$break-layout-settings: (
+    xs_mobile: (0 374px),
+    mobile:(0 767px),
+    tablet: (768px 1199px),
+    tablet_landscape: (1024px 1199px),
+    desktop: (1200px)
+);
+
+
+//mixin
+@mixin get-break-layout($screen: 'mobile'){
+    $break: map-get($break-layout-settings, $screen);
+    $len: length($break);
+    $query:'(min-width: #{nth($break,1)})';
+    @if($len > 1){
+        $query: '#{$query} and (max-width: #{nth($break,2)})';
+    }
+    @media #{$query}{
+        @content;
+    }  
+}
+@mixin at-breakpoint($screen: 'mobile') { 
+    @if $screen == 'all'{
+        @content;
+    }@else if $screen == 'mobile_and_tablet' {
+        @include get-break-layout('mobile') {
+            @content;
+        }
+        @include get-break-layout('tablet') {
+            @content;
+        }
+    } @else if $screen == 'tablet_and_desktop' {
+        @include get-break-layout('tablet') {
+            @content;
+        }
+        @include get-break-layout('desktop') {
+            @content;
+        }
+    } @else {
+        @include get-break-layout($screen) {
+            @content;
+        }
+    }
+}

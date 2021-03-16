@@ -1,0 +1,30 @@
+%before-reset:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+}
+%after-reset:after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+}
+%lazyloaded-effect{
+	opacity: 0;
+    -webkit-filter:blur(5px);
+    filter:blur(5px);
+	transition: opacity .5s, filter .5s, -webkit-filter .5s , transform .3s;
+	&.lazyloaded,
+    &.flickity-lazyloaded{
+		opacity: 1;
+        -webkit-filter:none;
+        filter:none;
+        //background:#000;
+	}
+}
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
