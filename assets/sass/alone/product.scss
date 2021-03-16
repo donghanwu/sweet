@@ -1,9 +1,42 @@
+
+
 .header {
-    border:1px red solid;
+    display: flex;
     position: fixed;
     width: 100%;
+    border:1px red solid;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 0px 42px  ;
+}
+.h1-logo{
+    width: 220px;
+    height:  41px;
+    // border:1px red solid;
+    background-image: url(../images/sweet/logo-all-dark.svg); 
+    background-size: cover;
+    font-size: 0;
+    
+    // background-color: red;
+    // background-image: url('../sass/images/sweet/logo-all-dark.svg'); 
+    // background-color:green;  
     
 }
+.nav-list a{
+    
+    // border: 1px solid red;   
+    padding-right: 60px;
+    color: #3F5D45;
+    text-decoration:none;
+
+
+}
+.header-navbar{
+    display: flex;
+    padding: 10px;
+    border: 1px solid blue;   
+}
+
 .header-logo{
     width: 100%;
     height: 500px;
