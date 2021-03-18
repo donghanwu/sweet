@@ -17,6 +17,7 @@ $sweet-green: #3f5d45;
     top: 0;
     left: 0;
     background-color: #fff;
+    z-index: 100;
 }
 
 .header {
@@ -96,6 +97,9 @@ icon-menu {
 }
 
 .banner {
+    display: flex;
+    justify-content: flex-end;
+    padding: 32px;
     width: 100%;
     height: 280px;
     position: relative;
@@ -104,14 +108,14 @@ icon-menu {
     @media (min-width: 768px) {
         width: 100%;
         height: 496px;
-        margin: 56px auto;
+        margin: 48px auto;
     }
 }
 
 .banner-text {
     width: 56px;
     height: 216px;
-    position: absolute;
+    // position: absolute;
     top: 32px;
     right: 32px;
     border: 1px solid $sweet-border-color;
@@ -120,26 +124,30 @@ icon-menu {
     @media (min-width: 768px) {
         width: 88px;
         height: 328px;
-        top: 32px;
-        right: 32px;
+        top: 40px;
+        right: 40px;
     }
 }
 
-.aside{
+.aside {
     height: 64px;
     width: 100%;
-    border: $sweet-border-color;
+    // border: $sweet-border-color;
     background: $sweet-green;
     font-size: 24px;
     line-height: 64px;
     text-align: center;
     vertical-align: middle;
     color: #eaf0ed;
-    border: 1px solid $sweet-border-color;
+    //border: 1px solid $sweet-border-color;
     @media (min-width: 768px) {
         width: 320px;
         height: 54px;
     }
+}
+
+.class-title{
+    background: #3f5d45;
 }
 
 .sweet-class {
@@ -150,11 +158,13 @@ icon-menu {
     list-style-type: none;
     height: 64px;
     color: $sweet-green;
-
 }
 
 .list-select {
     background-color: #eaf0ed;
 }
 
-
+.link-style {
+    text-decoration: none;
+    color:inherit;
+}
