@@ -203,125 +203,131 @@
 	@if $filename == map {
 		$char: "\E03C";
 	}
-	@if $filename == news {
+	@if $filename == menu {
 		$char: "\E03D";
 	}
-	@if $filename == ok {
+	@if $filename == news {
 		$char: "\E03E";
 	}
-	@if $filename == pano {
+	@if $filename == ok {
 		$char: "\E03F";
 	}
-	@if $filename == parking {
+	@if $filename == pano {
 		$char: "\E040";
 	}
-	@if $filename == pause {
+	@if $filename == parking {
 		$char: "\E041";
 	}
-	@if $filename == pennant {
+	@if $filename == pause {
 		$char: "\E042";
 	}
-	@if $filename == photo {
+	@if $filename == pennant {
 		$char: "\E043";
 	}
-	@if $filename == play {
+	@if $filename == photo {
 		$char: "\E044";
 	}
-	@if $filename == printer {
+	@if $filename == play {
 		$char: "\E045";
 	}
-	@if $filename == process {
+	@if $filename == printer {
 		$char: "\E046";
 	}
-	@if $filename == quest {
+	@if $filename == process {
 		$char: "\E047";
 	}
-	@if $filename == rail {
+	@if $filename == quest {
 		$char: "\E048";
 	}
-	@if $filename == reload {
+	@if $filename == rail {
 		$char: "\E049";
 	}
-	@if $filename == schedule {
+	@if $filename == reload {
 		$char: "\E04A";
 	}
-	@if $filename == service {
+	@if $filename == schedule {
 		$char: "\E04B";
 	}
-	@if $filename == shoe {
+	@if $filename == service {
 		$char: "\E04C";
 	}
-	@if $filename == shop {
+	@if $filename == shoe {
 		$char: "\E04D";
 	}
-	@if $filename == sleep {
+	@if $filename == shop {
 		$char: "\E04E";
 	}
-	@if $filename == sort {
+	@if $filename == shopping {
 		$char: "\E04F";
 	}
-	@if $filename == speaker {
+	@if $filename == sleep {
 		$char: "\E050";
 	}
-	@if $filename == star {
+	@if $filename == sort {
 		$char: "\E051";
 	}
-	@if $filename == street {
+	@if $filename == speaker {
 		$char: "\E052";
 	}
-	@if $filename == tag {
+	@if $filename == star {
 		$char: "\E053";
 	}
-	@if $filename == tasty {
+	@if $filename == street {
 		$char: "\E054";
 	}
-	@if $filename == tel {
+	@if $filename == tag {
 		$char: "\E055";
 	}
-	@if $filename == ticket {
+	@if $filename == tasty {
 		$char: "\E056";
 	}
-	@if $filename == tile {
+	@if $filename == tel {
 		$char: "\E057";
 	}
-	@if $filename == tour {
+	@if $filename == ticket {
 		$char: "\E058";
 	}
-	@if $filename == transport {
+	@if $filename == tile {
 		$char: "\E059";
 	}
-	@if $filename == triangle {
+	@if $filename == tour {
 		$char: "\E05A";
 	}
-	@if $filename == twitter {
+	@if $filename == transport {
 		$char: "\E05B";
 	}
-	@if $filename == umbrella {
+	@if $filename == triangle {
 		$char: "\E05C";
 	}
-	@if $filename == upload {
+	@if $filename == twitter {
 		$char: "\E05D";
 	}
-	@if $filename == uv {
+	@if $filename == umbrella {
 		$char: "\E05E";
 	}
-	@if $filename == video {
+	@if $filename == upload {
 		$char: "\E05F";
 	}
-	@if $filename == view {
+	@if $filename == uv {
 		$char: "\E060";
 	}
-	@if $filename == warn {
+	@if $filename == video {
 		$char: "\E061";
 	}
-	@if $filename == weibo {
+	@if $filename == view {
 		$char: "\E062";
 	}
-	@if $filename == whiteboard {
+	@if $filename == warn {
 		$char: "\E063";
 	}
-	@if $filename == youtube {
+	@if $filename == weibo {
 		$char: "\E064";
+	}
+	@if $filename == whiteboard {
+		$char: "\E065";
+	}
+	@if $filename == youtube {
+		$char: "\E066";
 	}
 
 	@return $char;

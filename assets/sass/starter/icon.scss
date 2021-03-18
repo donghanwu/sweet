@@ -20,7 +20,7 @@ i.icon {
 }
 
 
-$list:('heart-test','video','photo','info','triangle','close','star');
+$list:('menu','heart-test','video','photo','info','triangle','close','star','shopping');
 
 @each $var in $list {
     .icon-#{$var}:before {
