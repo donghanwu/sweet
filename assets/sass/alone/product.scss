@@ -1,56 +1,128 @@
+$sweet-border-color: none ;
 
+.main-container {
+    border: 2px solid $sweet-border-color;
+    background-color: #fff;
+}
+
+.header-wrapper {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.main-container {
+    padding-top: 88px;
+    display: flex;
+}
 
 .header {
     display: flex;
-    position: fixed;
-    width: 100%;
-    border:1px red solid;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 88px;
+    margin: 0 auto;
+    padding-right: 32px;
+    padding-left: 32px;
+    border: 1px solid $sweet-border-color; 
     background-color: #fff;
-    padding: 0px 42px  ;
+    @media (min-width: 768px) {
+        justify-content: start;
+    }
 }
-.h1-logo{
-    width: 220px;
-    height:  41px;
-    // border:1px red solid;
-    background-image: url(../images/sweet/logo-all-dark.svg); 
-    background-size: cover;
+
+.btn-menu {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.h1-logo {
+    width: 114px;
+    height: 18px;
+    background: url(../images/sweet/logotype-sm-dark.svg) no-repeat;
     font-size: 0;
-    
-    // background-color: red;
-    // background-image: url('../sass/images/sweet/logo-all-dark.svg'); 
-    // background-color:green;  
-    
+    @media (min-width: 768px) {
+        width: 220px;
+        height: 41px;
+        background-image: url(../images/sweet/logo-all-dark.svg);
+    }
 }
-.nav-list a{
-    
-    // border: 1px solid red;   
-    padding-right: 60px;
-    color: #3F5D45;
-    text-decoration:none;
-
-
+// .nav-item{
+//     margin-right: 56px;
+//     &:last-child{
+//         margin-right: 0;
+//     }
+// }
+.nav-item:not(:last-child) {
+    margin-right: 56px;
 }
-.header-navbar{
-    display: flex;
+
+.nav-link {
+    border: 1px solid $sweet-border-color;
+    color: #3f5d45;
+    text-decoration: none;
+}
+.header-navbar {
+    display: none;
     padding: 10px;
-    border: 1px solid blue;   
+    @media (min-width: 768px) {
+        display: flex;
+        margin-left: auto;
+        margin-right: 48px;
+    }
 }
 
-.header-logo{
+.header-logo {
     width: 100%;
     height: 500px;
-    // position:relative ;
-    background-color: red;
+    background-color: $sweet-border-color;
     border: none;
     top: 100px;
 }
-.nav-bar{
+.nav-bar {
     position: fixed;
     display: flex;
-    // top:  30px;
     height: 50px;
     width: 100%;
     background-color: #fff;
-    
+}
+.test {
+    width: 50%;
+    height: 20px;
+    border: 1px solid #000;
+}
+
+.banner {
+    width: 100%;
+    height: 280px;
+    position: relative;
+    background: url(../images/sweet/sweetast-00.jpg) no-repeat;
+    background-size: cover;
+    @media (min-width: 768px) {
+        width: 960px;
+        height: 496px;
+        margin: 56px auto;
+    }
+}
+
+.banner-text {
+    width: 56px;
+    height: 216px;
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    border: 1px solid $sweet-border-color;
+    background: url(../images/sweet/header-text.svg) no-repeat;
+    font-size: 0;
+    @media (min-width: 768px) {
+        width: 88px;
+        height: 328px;
+        top: 32px;
+        right: 32px;
+    }
 }
