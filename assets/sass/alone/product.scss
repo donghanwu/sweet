@@ -3,7 +3,7 @@ $sweet-border-color: none;
 $sweet-green: #3f5d45;
 
 .main-container {
-    max-width: 1200px;
+    max-width: 1280px;
     height: 2500px;
     margin: 0 auto;
     padding-top: 88px;
@@ -26,7 +26,7 @@ $sweet-green: #3f5d45;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     height: 88px;
     margin: 0 auto;
     padding-right: 32px;
@@ -130,20 +130,68 @@ icon-menu {
     }
 }
 
-.aside {
-    // height: 64px;
-    width: 100%;
-    // border: $sweet-border-color;
+.product-container {
+    
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: flex-start;
+        // padding: 0 40px;
+    }
+}
+
+.left-aside {
     background: $sweet-green;
     font-size: 24px;
-    // line-height: 40px;
     text-align: center;
     vertical-align: middle;
     color: #eaf0ed;
-    //border: 1px solid $sweet-border-color;
+    margin-right: 20px;
+    flex-shrink: 0;
+    
     @media (min-width: 768px) {
-        width: 320px;
-        // height: 54px;
+        width: 300px;
+    }
+}
+
+.right-product-box{
+    // width: 100%;
+}
+
+// .left-box {
+//     width: 320px;
+//     margin-right: 20px;
+//     flex-shrink: 0;
+// }
+
+.sweet-product-list {
+    padding: 0 32px;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+}
+
+.sweet-product-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 32px;
+    .btn-heart {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    @media (min-width: 768px) {
+        width: calc((100% - 20px) / 2);
+        margin-right: 20px;
+        margin-bottom: 20px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 0;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
     }
 }
 
@@ -159,7 +207,6 @@ icon-menu {
 
 .class-text {
     list-style-type: none;
-    // height: 64px;
     color: $sweet-green;
 }
 
@@ -172,65 +219,194 @@ icon-menu {
     padding: 12px 0;
     text-decoration: none;
     color: inherit;
-    border: 1px solid red;
+    // border: 1px solid red;
     //@include rb;
     //font-size: rem(18px);
 }
 
 .link-style2 {
-    display: block;
-    padding: 12px ;
-    text-decoration: none;
-    color: inherit;
-    border: 1px solid blue;
+    padding: 12px;
+    // border: 1px solid blue;
     //@include rb;
     //font-size: rem(18px);
 }
 
-.right {
-    // color: inherit;
-}
 .product {
-    width: 100%; 
-   
-}
-.product-img{
-    width: 100%;  
-}
-.product-icons{
-    position: absolute;
-   
-}
-
-.today{
-
-    writing-mode: vertical-lr 
-}
-.info {
-    display: flex;
-    justify-content: space-around ;
-    border-left: 1px solid #EAF0ED;
-    border-right: 1px solid #EAF0ED;
-    // padding:32px;
-    font-size: 24px;
-    color: $sweet-green;
-    
-}
-.price{
-    font-weight:bold;
-}
-.buy {
     width: 100%;
-    padding:16px;
+}
+
+.product-imgbox {
+    position: relative;
+}
+
+.product-img {
+    position: relative;
+    // top: 0;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.product-icons {
+    // left: 10px;
+}
+
+.today {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    text-align: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // letter-spacing: 6px;
+    // padding: 10px 10px;
+    width: 36px;
+    padding: 10px;
+    // height: 104px;
+    position: absolute;
+    // writing-mode: vertical-lr;
+    background-color: $sweet-green;
+    color: #fff;
+    text-align: center;
+}
+
+.btn-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-buy {
+    width: 100%;
+    padding: 16px;
     background-color: #eaf0ed;
-    font-size: 36px;
+    font-size: 24px;
     text-align: center;
     color: $sweet-green;
-    font-weight:bold;
+    font-weight: bold;
 }
 
-.item{
-    padding: 32px;
+.sweet-product-card {
+    // display: block;
+    // border:1px red solid;
+    text-decoration: none;
 }
 
+.sweet-info {
+    margin-top: -8px;
+    display: flex;
+    justify-content: space-around;
+    // border-left: 1px solid #eaf0ed;
+    // border-right: 1px solid #eaf0ed;
+    // padding:32px;
+    font-size: 20px;
+    color: $sweet-green;
+}
+.sweet-name {
+    width: 100%;
+    border: 1px solid #eaf0ed;
+    text-align: center;
+}
+.sweet-price {
+    width: 100%;
+    border: 1px solid #eaf0ed;
+    font-weight: bold;
+    text-align: center;
+}
 
+.rowbox-2 {
+    @media (min-width: 768px) {
+        //width: 100%;
+        //background-color: black;
+    }
+}
+
+// ### test
+.sweets-right-product-list {
+    position: relative;
+    width: 100%;
+    padding: 0 32px;
+
+    .btn-heart {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    @media (min-width: 768px) {
+        width: 320px;
+        padding: 0;
+    }
+}
+
+.sweets-product-list {
+    // padding: 0 32px;
+    @media (min-width: 768px) {
+        padding: 0;
+        margin-top: 32px;
+    }
+}
+
+.sweets-product {
+    width: 100%;
+    margin-top: 32px;
+}
+
+.sweets-product-info {
+    margin-top: -8px;
+}
+
+.layout-product-link {
+    display: flex;
+
+    // border: 1px solid red;
+}
+.sweets-product-link {
+    width: 100%;
+    text-decoration: none;
+    font-size: 24px;
+    color: $sweet-green;
+}
+.sweets-product-img {
+    width: 100%;
+    height: 360px;
+    border: 1px solid #eaf0ed;
+    object-fit: cover;
+}
+
+.sweets-product-name {
+    border: 1px solid #eaf0ed;
+    width: 100%;
+    text-align: center;
+}
+.sweets-product-price {
+    font-weight: bold;
+    width: 100%;
+    border: 1px solid #eaf0ed;
+    text-align: center;
+}
+
+.sweets-product-buy {
+    border: 1px solid #eaf0ed;
+    width: 100%;
+    text-align: center;
+    color: $sweet-green;
+    background-color: #eaf0ed;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.sweets-btn-heart {
+    // position: absolute;
+    // top: 0;
+    // font-size: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
