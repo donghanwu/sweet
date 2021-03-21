@@ -131,7 +131,6 @@ icon-menu {
 }
 
 .product-container {
-    
     @media (min-width: 768px) {
         display: flex;
         align-items: flex-start;
@@ -147,13 +146,13 @@ icon-menu {
     color: #eaf0ed;
     margin-right: 20px;
     flex-shrink: 0;
-    
+
     @media (min-width: 768px) {
         width: 300px;
     }
 }
 
-.right-product-box{
+.right-product-box {
     // width: 100%;
 }
 
@@ -409,4 +408,33 @@ icon-menu {
     align-items: center;
     width: 40px;
     height: 40px;
+}
+
+.choice-box {
+    display: flex;
+    @media (min-width: 768px) {
+        justify-content: flex-end;
+    }
+}
+.choice-list {
+    display: flex;
+    width: 100%;
+    padding: 48px;
+    @media (min-width: 768px) {
+        width: 35%;
+        padding: 0;
+        // margin: 32px;
+    }
+}
+.page {
+    width: 100%;
+    padding: 25px 0;
+    border: 1px solid #eaf0ed;
+    text-align: center;
+    font-size: 20px;
+    color: #3f5d45;
+    &.page-choice {
+        background-color: #3f5d45;
+        color: #eaf0ed;
+    }
 }
