@@ -1,57 +1,77 @@
 @import "_starter";
+
+$max-main-container: 1280px;
 $sweet-border-color: none;
+$sweet-white: #fff;
 $sweet-green: #3f5d45;
+$sweet-light-green: #eaf0ed;
+$sweet-blue: blue;
 
 .main-container {
-    max-width: 1280px;
-    // height: 100%;
+    max-width: $max-main-container;
     margin: 0 auto;
-    padding-top: 88px;
+    padding-top: 100px;
     border: 2px solid $sweet-border-color;
-    background-color: #fff;
+    background-color: $sweet-white;
     font-family: "微軟正黑體";
-}
-
-.header-wrapper {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: 100;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1280px;
-    height: 88px;
-    margin: 0 auto;
-    padding-right: 32px;
-    padding-left: 32px;
-    border: 1px solid $sweet-border-color;
-    background-color: #fff;
     @media (min-width: 768px) {
-        justify-content: start;
+        padding-left: 42px;
+        padding-right: 42px;
     }
 }
 
-.btn-menu {
+.sweet-header {
+    // max-width: $max-main-container;
+    width: 100%;
+    height: 88px;
+    padding-top: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 2px solid $sweet-border-color;
+    background-color: $sweet-white;
+    z-index: 100;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    max-width: $max-main-container;
+    position: fixed;
+    padding-right: 32px;
+    padding-left: 32px;
+    background-color: #fff;
+    border: 2px solid $sweet-white;
+    z-index: 100;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+}
+
+.btn-hamburger-menu {
     @media (min-width: 768px) {
         display: none;
     }
 }
 
-.h1-logo {
+.logo-text-dark {
     width: 114px;
     height: 18px;
     background: url(../images/sweet/logotype-sm-dark.svg) no-repeat;
     font-size: 0;
     @media (min-width: 768px) {
         width: 220px;
-        height: 41px;
+        height: 40px;
         background-image: url(../images/sweet/logo-all-dark.svg);
     }
 }
@@ -98,23 +118,24 @@ $sweet-green: #3f5d45;
 }
 
 .icon-shopping,
-icon-menu {
+.icon-menu {
+    font-size: 24px;
     color: #3f5d45;
 }
 
-.banner {
+.sweet-banner {
     display: flex;
     justify-content: flex-end;
     padding: 32px;
     width: 100%;
-    height: 280px;
+    height: 277px;
     position: relative;
     background: url(../images/sweet/sweetast-00.jpg) no-repeat;
     background-size: cover;
     @media (min-width: 768px) {
         width: 100%;
         height: 496px;
-        margin: 48px auto;
+        margin: 12px auto 60px;
     }
 }
 
@@ -134,39 +155,35 @@ icon-menu {
     }
 }
 
-.product-container {
+.sweet-product-container {
     @media (min-width: 768px) {
         display: flex;
         align-items: flex-start;
-        // padding: 0 40px;
     }
 }
 
 .left-aside {
-    background: $sweet-green;
+    // display: flex;
+    flex-shrink: 0;
+    // vertical-align: middle;
     font-size: 24px;
     text-align: center;
-    vertical-align: middle;
     color: #eaf0ed;
-    flex-shrink: 0;
-
     @media (min-width: 768px) {
         width: 300px;
         margin-right: 20px;
     }
 }
 
-.right-product-box {
-    // width: 100%;
+.aside-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    background: #3f5d45;
 }
 
-// .left-box {
-//     width: 320px;
-//     margin-right: 20px;
-//     flex-shrink: 0;
-// }
-
-.sweet-product-list {
+.right-product {
     padding: 0 32px;
     @media (min-width: 768px) {
         display: flex;
@@ -179,10 +196,10 @@ icon-menu {
     }
 }
 
-.sweet-product-item {
-    position: relative;
+.product-card {
     width: 100%;
     margin-bottom: 32px;
+    position: relative;
     .btn-heart {
         position: absolute;
         top: 0;
@@ -210,44 +227,8 @@ icon-menu {
     }
 }
 
-.class-title {
-    background: #3f5d45;
-    padding: 12px 0;
-}
-
-.sweet-class {
-    color: #eaf0ed;
-    background-color: #fff;
-}
-
-.class-text {
-    list-style-type: none;
-    color: $sweet-green;
-}
-
-.list-select {
-    background-color: #eaf0ed;
-}
-
-.link-style {
-    display: block;
-    padding: 12px 0;
+.product-group {
     text-decoration: none;
-    color: inherit;
-    // border: 1px solid red;
-    //@include rb;
-    //font-size: rem(18px);
-}
-
-.link-style2 {
-    padding: 12px;
-    // border: 1px solid blue;
-    //@include rb;
-    //font-size: rem(18px);
-}
-
-.product {
-    width: 100%;
 }
 
 .product-img {
@@ -258,11 +239,7 @@ icon-menu {
     object-fit: cover;
 }
 
-.product-icons {
-    // left: 10px;
-}
-
-.today {
+.product-today {
     position: absolute;
     top: 0;
     left: 16px;
@@ -282,6 +259,39 @@ icon-menu {
     text-align: center;
 }
 
+.product-info {
+    margin-top: -8px;
+    display: flex;
+    justify-content: space-around;
+    // border-left: 1px solid #eaf0ed;
+    // border-right: 1px solid #eaf0ed;
+    // padding:32px;
+    font-size: 20px;
+    color: $sweet-green;
+}
+
+.product-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    font-size: 20px;
+    width: 100%;
+    border: 1px solid #eaf0ed;
+    text-align: center;
+}
+
+.product-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    font-size: 20px;
+    width: 100%;
+    border: 1px solid #eaf0ed;
+    font-weight: bold;
+}
+
 .btn-heart {
     display: flex;
     justify-content: center;
@@ -294,7 +304,7 @@ icon-menu {
 
 .btn-buy {
     width: 100%;
-    padding: 16px;
+    height: 65px;
     background-color: #eaf0ed;
     font-size: 24px;
     text-align: center;
@@ -302,32 +312,48 @@ icon-menu {
     font-weight: bold;
 }
 
-.sweet-product-card {
-    // display: block;
-    // border:1px red solid;
-    text-decoration: none;
+.sweet-class {
+    color: #eaf0ed;
+    background-color: #fff;
 }
 
-.sweet-info {
-    margin-top: -8px;
+.aside-list-item {
     display: flex;
-    justify-content: space-around;
-    // border-left: 1px solid #eaf0ed;
-    // border-right: 1px solid #eaf0ed;
-    // padding:32px;
-    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    border: 1px solid $sweet-light-green;
+    font-size: 24px;
     color: $sweet-green;
 }
-.sweet-name {
-    width: 100%;
-    border: 1px solid #eaf0ed;
-    text-align: center;
+
+.class-select {
+    background-color: $sweet-light-green;
 }
-.sweet-price {
+
+.a-link-style {
+    // display: block;
+    // padding: 12px 0;
+    text-decoration: none;
+    color: inherit;
+    // border: 1px solid red;
+    //@include rb;
+    //font-size: rem(18px);
+}
+
+// .link-style2 {
+//     padding: 12px;
+//     // border: 1px solid blue;
+//     //@include rb;
+//     //font-size: rem(18px);
+// }
+
+.product {
     width: 100%;
-    border: 1px solid #eaf0ed;
-    font-weight: bold;
-    text-align: center;
+}
+
+.product-icons {
+    // left: 10px;
 }
 
 .rowbox-2 {
@@ -351,7 +377,6 @@ icon-menu {
     @media (min-width: 768px) {
         width: 35%;
         padding: 0;
-        // margin: 32px;
     }
 }
 
@@ -387,9 +412,9 @@ icon-menu {
     color: #eaf0ed;
 }
 
-.logo-img {
-    width: 50px;
-    height: 50px;
+.logo-light {
+    width: 40px;
+    height: 40px;
     margin-right: 20px;
     object-fit: cover;
 }
@@ -427,19 +452,23 @@ icon-menu {
 .mail-input {
     width: 80%;
     font-size: 30px;
+    color: $sweet-green;
 }
 
-.mail-input-btn {
+.arrow {
     width: 64px;
     height: 56px;
     background-color: #ffe180;
+    color: $sweet-green;
     text-align: center;
 }
 
 .icon-mail {
-    font-size: 30px;
+    font-size: 18px;
     background-color: #eaf0ed;
     color: $sweet-green;
+    width: 64px;
+    height: 56px;
 }
 
 footer {
@@ -470,7 +499,7 @@ footer {
     // width: px;
 }
 
-.social-icon {
+.icon-social {
     width: 32px;
     height: 32px;
 }

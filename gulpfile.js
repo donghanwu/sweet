@@ -19,7 +19,7 @@ const bulkSass = require('gulp-sass-bulk-import');
 const path = require('path');
 const clean = require('gulp-clean');
 const savefile = require('gulp-savefile');
-const LIVERELOAD_FILES_PATH = ['./js/app.min.js', './js/alone/*.min.js', './**/*.html', "./assets/**/*.svg", "./assets/css/*.css","index.html","data/*.json","tours/**/*.json"];
+const LIVERELOAD_FILES_PATH = ['./js/app.min.js', './js/alone/*.min.js', './**/*.html', "./assets/**/*.svg", "./assets/css/*.css", "index.html", "data/*.json", "tours/**/*.json"];
 const SCRIPTS_BUNDLE_PATH = ['./js/**/*.js', '!./js/**/*.min.js', '!./js/alone/*.js', '!./js/app.min.js'];
 const FONT_NAME = 'iconfont';
 
@@ -62,12 +62,12 @@ const sassCurrentFile = (file) => {
 
 const tmpCssBundle = () => {
     return gulp.src([
-            "./assets/css/tmp/reset.css",
-            "./assets/css/tmp/bootstrap-csii.css",
-            "./assets/css/tmp/starter/icon.css",
-            "./assets/css/tmp/**/*.css",
-            "./assets/css/tmp/partials/utility.css",
-        ])
+        "./assets/css/tmp/reset.css",
+        "./assets/css/tmp/bootstrap-csii.css",
+        "./assets/css/tmp/starter/icon.css",
+        "./assets/css/tmp/**/*.css",
+        "./assets/css/tmp/partials/utility.css",
+    ])
         .pipe(sourcemaps.init())
         .pipe(concat('app.css'))
         .pipe(sourcemaps.write())
@@ -106,10 +106,10 @@ const sassAloneAll = () => {
 
 const scriptsLibsBundle = () => {
     return gulp.src([
-            "./js/libs/jquery-core/jquery-1.12.1.js",
-            "./js/libs/**/*.js",
-            "!./js/libs/_libs.js",
-        ])
+        "./js/libs/jquery-core/jquery-1.12.1.js",
+        "./js/libs/**/*.js",
+        "!./js/libs/_libs.js",
+    ])
         .pipe(concat('_libs.js'))
         .pipe(gulp.dest('./js/libs/'))
 };
@@ -117,11 +117,11 @@ const scriptsLibsBundle = () => {
 
 const scriptsBundle = () => {
     return gulp.src([
-            //"./js/libs/_libs.js",
-            "./js/*.js",
-            "!./js/alone/*.js",
-            "!./js/app.min.js"
-        ])
+        //"./js/libs/_libs.js",
+        "./js/*.js",
+        "!./js/alone/*.js",
+        "!./js/app.min.js"
+    ])
         .pipe(
             babel({
                 "presets": [
@@ -144,12 +144,12 @@ const sassTmpCompress = () => {
 
 const tmpCssBundleCompress = () => {
     return gulp.src([
-            "./assets/css/tmp/reset.css",
-            "./assets/css/tmp/bootstrap-csii.css",
-            "./assets/css/tmp/starter/icon.css",
-            "./assets/css/tmp/**/*.css",
-            "./assets/css/tmp/partials/utility.css",
-        ])
+        "./assets/css/tmp/reset.css",
+        "./assets/css/tmp/bootstrap-csii.css",
+        "./assets/css/tmp/starter/icon.css",
+        "./assets/css/tmp/**/*.css",
+        "./assets/css/tmp/partials/utility.css",
+    ])
         .pipe(concat('app.css'))
         .pipe(cleanCSS())
         .pipe(gulp.dest('./assets/css'))
@@ -198,7 +198,7 @@ const watchFiles = () => {
         if (path.basename(file).indexOf('_') === 0) {
             filePath = `Content/sass/alone/page-${path.dirname(file).split(path.sep).pop()}.scss`;
             return gulp.src(filePath).
-            pipe(savefile())
+                pipe(savefile())
         } else {
             sassAlone(filePath)
         }
@@ -213,7 +213,7 @@ const watchFiles = () => {
 };
 
 const defaultStep01 = series(cleanTmpCss, parallel(makeIconfont, sprite, sassBootstrap))
-const defaultStep02 = parallel(sassTmp /*, scriptsLibsBundle*/ )
+const defaultStep02 = parallel(sassTmp /*, scriptsLibsBundle*/)
 const defaultStep03 = parallel(sassAloneAll, scriptsAloneMinifyAll, scriptsBundle, tmpCssBundle)
 
 gulp.task('_default', series(defaultStep01, defaultStep02, defaultStep03, watchFiles))
