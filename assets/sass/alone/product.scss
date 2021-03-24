@@ -1,5 +1,3 @@
-@import "_starter";
-
 $max-main-container: 1200px;
 $sweet-border-color: none;
 $product-gap: 20px;
@@ -9,14 +7,25 @@ $sweet-green: #3f5d45;
 $sweet-light-green: #eaf0ed;
 $sweet-blue: blue;
 
-.main-container {
+.sweet-container {
     max-width: $max-main-container;
+    margin: 0 auto;
+}
+
+.main-container {
+    // max-width: $max-main-container;
     margin: 0 auto;
     padding-top: 100px;
     border: 2px solid $sweet-border-color;
     background-color: $sweet-white;
     font-family: "微軟正黑體";
+
     @media (min-width: 768px) {
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+    @media (min-width: 1200px) {
+        // margin: 0 auto;
         padding-left: 42px;
         padding-right: 42px;
     }
@@ -35,6 +44,8 @@ $sweet-blue: blue;
     @media (min-width: 768px) {
         display: flex;
         justify-content: center;
+        padding-left: 42px;
+        padding-right: 42px;
     }
 }
 
@@ -45,7 +56,7 @@ $sweet-blue: blue;
     width: 100%;
     height: 40px;
     max-width: $max-main-container;
-    position: fixed;
+    // position: fixed;
     padding-right: 32px;
     padding-left: 32px;
     background-color: #fff;
@@ -54,8 +65,8 @@ $sweet-blue: blue;
     @media (min-width: 768px) {
         display: flex;
         justify-content: space-between;
-        padding-left: 42px;
-        padding-right: 42px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -123,10 +134,14 @@ $sweet-blue: blue;
     position: relative;
     background: url(../images/sweet/sweetast-00.jpg) no-repeat;
     background-size: cover;
+    max-width: $max-main-container;
     @media (min-width: 768px) {
         width: 100%;
         height: 496px;
         margin: 12px auto 60px;
+    }
+    @media (min-width: 1200px) {
+        width: 100%;
     }
 }
 
@@ -358,13 +373,16 @@ $sweet-blue: blue;
 }
 
 .contact-us {
-    margin-top: 30px;
+    // display: flex;
+    // justify-content: center;
+    // margin-top: 30px;
+    margin: 30px auto 0;
     padding: 32px;
     background-color: $sweet-green;
     @media (min-width: 768px) {
         display: flex;
-        justify-content: space-between;
-        padding: 32px 120px;
+        justify-content: center;
+        padding: 32px 42px;
     }
 }
 
@@ -383,6 +401,10 @@ $sweet-blue: blue;
     object-fit: cover;
 }
 
+.h2 {
+    font-size: 24px;
+}
+
 .sweet-mail {
     display: flex;
     justify-content: center;
@@ -391,9 +413,11 @@ $sweet-blue: blue;
     height: 56px;
     margin-top: 30px;
     @media (min-width: 768px) {
-        width: 380px;
+        justify-content: space-between;
+        width: 360px;
         margin-top: 0;
     }
+
     background-color: #eaf0ed;
     color: $sweet-green;
 }
@@ -434,20 +458,33 @@ $sweet-blue: blue;
     height: 56px;
 }
 
-footer {
+.sweet-footer {
+    margin: 0 auto;
     width: 100%;
     height: 320px;
     padding: 30px;
     position: relative;
     background-color: #eaf0ed;
     color: $sweet-green;
+
     @media (min-width: 768px) {
         width: 100%;
         height: 340px;
-        padding: 40px 120px;
+        padding: 40px 40px;
+    }
+    @media (min-width: 1200px) {
+        width: 100%;
+        height: 340px;
+
+        // padding: 40px 122px;
     }
 }
 
+.footer-center {
+    position: relative;
+    margin: 0 auto;
+    max-width: $max-main-container;
+}
 .sweet-logo-text {
     width: 176px;
     @media (min-width: 768px) {
@@ -473,7 +510,7 @@ footer {
     @media (min-width: 768px) {
         position: absolute;
         bottom: 10px;
-        right: 120px;
+        right: 32px;
     }
 }
 
@@ -483,7 +520,16 @@ footer {
         display: block;
         width: 64px;
         position: absolute;
-        top: 30px;
-        right: 120px;
+        top: 0;
+        right: 32px;
+    }
+}
+
+.contact-us-center {
+    max-width: $max-main-container;
+    @media (min-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 }

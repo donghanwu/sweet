@@ -1,3 +1,20 @@
+.father {
+    border: 1px solid green;
+    padding: 0 50px;
+    @media (min-width: 768px) {
+        padding: 0 100px;
+    }
+    @media (min-width: 1200px) {
+        padding: 50px 200px;
+    }
+    
+}
+.child {
+    border: 1px solid orange;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
 @import "_starter";
 
 $max-main-container: 1200px;
