@@ -8,6 +8,27 @@ $sweet-light-green: #eaf0ed;
 $sweet-blue: blue;
 $sweet-yellow: #ffe180;
 
+.cart-hr {
+    border: 1px solid $sweet-light-green;
+}
+
+.abc1 {
+    // border: 1px solid blue;
+    @media (min-width: 768px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.def1 {
+    @media (min-width: 768px) {
+        width: 100%;
+        display: block;
+        align-items: center;
+    }
+}
+
 .font-size-24 {
     font-size: 24px;
     color: $sweet-green;
@@ -22,11 +43,11 @@ $sweet-yellow: #ffe180;
     color: $sweet-green;
 }
 
-.font-bold {
+.font-bolds {
     font-weight: 600;
 }
 
-.p-top-bottom-8 {
+.p-top-bottom {
     padding: 8px 0;
 }
 
@@ -36,6 +57,7 @@ $sweet-yellow: #ffe180;
     font-weight: normal;
 }
 .h3 {
+    width: 100%;
     font-size: 20px;
     color: $sweet-green;
     font-weight: 300;
@@ -50,6 +72,24 @@ $sweet-yellow: #ffe180;
     font-size: 16px;
 }
 
+.cart-left-product {
+    @media (min-width: 768px) {
+        margin-right: 20px;
+        width: 680px;
+    }
+}
+
+.cart-left-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    background-color: $sweet-light-green;
+    font-weight: 600;
+    color: $sweet-green;
+    font-size: 24px;
+}
 .cart-title-style {
     display: flex;
     justify-content: center;
@@ -58,20 +98,28 @@ $sweet-yellow: #ffe180;
     height: 65px;
     background-color: $sweet-light-green;
     color: $sweet-green;
+
     @media (min-width: 768px) {
         background-color: $sweet-light-green;
     }
 }
 
-.cart-buy-style {
+.cart-pay {
     width: 100%;
     height: 65px;
-    text-align: center;
     background-color: $sweet-yellow;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: $sweet-green;
 }
 
 .cart-list {
     padding: 30px 30px 0;
+    @media (min-width: 768px) {
+        margin-top: 33px;
+        padding: 0;
+    }
 }
 
 .cart-container {
@@ -83,18 +131,45 @@ $sweet-yellow: #ffe180;
         margin: 0 auto;
         width: 100%;
         max-width: $max-main-container;
+        padding-top: 30px;
     }
 }
 .cart-item {
     margin-bottom: 30px;
+    @media (min-width: 768px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        // border-bottom: 1px solid $sweet-light-green;
+    }
     // align-items: center;
 }
 .cart-card {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        // display: block;
+    }
 
     //     display: flex;
     //     justify-content: space-between;
+}
+
+.cart-product-info {
+    @media (min-width: 768px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        // border: 1px solid red;
+    }
 }
 .cart-img {
     width: 157px;
@@ -102,6 +177,7 @@ $sweet-yellow: #ffe180;
     margin-right: 16px;
     object-fit: cover;
     // width: 110px;
+    min-width: 157px;
 }
 
 .cart-count {
@@ -136,6 +212,11 @@ $sweet-yellow: #ffe180;
     font-size: 20px;
     text-align: right;
     padding: 8px 0;
+    @media (min-width: 768px) {
+        width: 120px;
+        text-align: center;
+        border: none;
+    }
 }
 
 .right-total {
@@ -148,11 +229,40 @@ $sweet-yellow: #ffe180;
 .right-group {
     width: 100%;
     // padding: 16px 28px;
-    border: 1px solid blue;
+    font-weight: 300;
+    font-size: 16px;
+    color: $sweet-green;
+    border: 1px solid $sweet-border-color;
+    font-weight: 300;
+
     @media (min-width: 768px) {
-        // padding-left: 42px;
-        // padding-right: 42px;
+        background-color: $sweet-green;
+        color: $sweet-light-green;
     }
+}
+
+.order-title {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    background-color: $sweet-light-green;
+    color: $sweet-green;
+    font-weight: 600;
+
+    @media (min-width: 768px) {
+        background-color: $sweet-green;
+        color: $sweet-white;
+        border-bottom: 1px solid $sweet-white;
+        padding: 0 8px;
+    }
+}
+
+.cart-point {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .Shopping-details {
@@ -165,6 +275,10 @@ $sweet-yellow: #ffe180;
 
 .btn-delete {
     display: none;
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .sweet-container {
