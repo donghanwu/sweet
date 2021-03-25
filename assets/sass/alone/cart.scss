@@ -58,6 +58,9 @@ $sweet-yellow: #ffe180;
     height: 65px;
     background-color: $sweet-light-green;
     color: $sweet-green;
+    @media (min-width: 768px) {
+        background-color: $sweet-light-green;
+    }
 }
 
 .cart-buy-style {
@@ -65,7 +68,6 @@ $sweet-yellow: #ffe180;
     height: 65px;
     text-align: center;
     background-color: $sweet-yellow;
-   
 }
 
 .cart-list {
@@ -76,8 +78,11 @@ $sweet-yellow: #ffe180;
     // padding-top: 100px;
     @media (min-width: 768px) {
         display: flex;
+        justify-content: space-between;
         align-items: start;
-        margin-top˛: 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: $max-main-container;
     }
 }
 .cart-item {
@@ -135,18 +140,24 @@ $sweet-yellow: #ffe180;
 
 .right-total {
     width: 100%;
+    @media (min-width: 768px) {
+        width: 300px;
+    }
 }
 
 .right-group {
     width: 100%;
-    padding: 16px 28px;
-    border: 1px solid  blue;
+    // padding: 16px 28px;
+    border: 1px solid blue;
     @media (min-width: 768px) {
-        padding-left: 42px;
-        padding-right: 42px;
+        // padding-left: 42px;
+        // padding-right: 42px;
     }
 }
 
+.Shopping-details {
+    padding: 16px 28px;
+}
 .Shopping-info {
     display: flex;
     justify-content: space-between;
