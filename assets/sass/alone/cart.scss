@@ -1,22 +1,3 @@
-.father {
-    border: 1px solid green;
-    padding: 0 50px;
-    @media (min-width: 768px) {
-        padding: 0 100px;
-    }
-    @media (min-width: 1200px) {
-        padding: 50px 200px;
-    }
-    
-}
-.child {
-    border: 1px solid orange;
-    margin: 0 auto;
-    max-width: 500px;
-}
-
-@import "_starter";
-
 $max-main-container: 1200px;
 $sweet-border-color: none;
 $product-gap: 20px;
@@ -25,15 +6,180 @@ $sweet-white: #fff;
 $sweet-green: #3f5d45;
 $sweet-light-green: #eaf0ed;
 $sweet-blue: blue;
+$sweet-yellow: #ffe180;
+
+.font-size-24 {
+    font-size: 24px;
+    color: $sweet-green;
+}
+.font-size-20 {
+    font-size: 20px;
+    color: $sweet-green;
+}
+
+.font-size-16 {
+    font-size: 16px;
+    color: $sweet-green;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.p-top-bottom-8 {
+    padding: 8px 0;
+}
+
+.h2 {
+    font-size: 24px;
+    color: $sweet-green;
+    font-weight: normal;
+}
+.h3 {
+    font-size: 20px;
+    color: $sweet-green;
+    font-weight: 300;
+}
+.h4 {
+    font-size: 16px;
+    color: $sweet-green;
+    font-weight: normal;
+}
+
+.font-size-16 {
+    font-size: 16px;
+}
+
+.cart-title-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    background-color: $sweet-light-green;
+    color: $sweet-green;
+
+}
+
+.cart-buy-style {
+    width: 100%;
+    height: 65px;
+    text-align: center;
+    background-color: $sweet-yellow;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+
+.cart-list {
+    padding: 30px 30px 0;
+}
+
+.cart-container {
+    padding-top: 100px;
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: start;
+        margin-top: 0;
+    }
+}
+.cart-item {
+    margin-bottom: 30px;
+    // align-items: center;
+}
+.cart-card {
+    display: flex;
+    justify-content: flex-start;
+
+    //     display: flex;
+    //     justify-content: space-between;
+}
+.cart-img {
+    width: 157px;
+    height: 106px;
+    margin-right: 16px;
+    object-fit: cover;
+    // width: 110px;
+}
+
+.cart-count {
+    display: flex;
+    justify-content: auto;
+}
+
+.count-base {
+    width: 48px;
+    height: 48px;
+    margin-top: 8px 0;
+    border: 1px solid $sweet-light-green;
+    color: $sweet-green;
+    text-align: center;
+}
+
+.count-box {
+    width: 48px;
+    height: 48px;
+    border: 1px solid $sweet-light-green;
+    text-align: center;
+    margin-right: 0;
+    color: $sweet-green;
+}
+
+.item-price {
+    width: 100%;
+    border-top: 1px solid $sweet-light-green;
+    border-bottom: 1px solid $sweet-light-green;
+    color: $sweet-green;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: right;
+    padding: 8px 0;
+}
+
+.right-total {
+    width: 100%;
+    @media (min-width: 768px) {
+        width: 300px;
+    }
+    
+}
+
+.right-group {
+    width: 100%;
+    padding: 16px 28px;
+    border: 1px solid  blue;
+    @media (min-width: 768px) {
+        width: 300px;
+    }
+}
+
+.Shopping-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-delete {
+    display: none;
+}
+
+.sweet-container {
+    max-width: $max-main-container;
+    margin: 0 auto;
+}
 
 .main-container {
-    max-width: $max-main-container;
+    // max-width: $max-main-container;
     margin: 0 auto;
     padding-top: 100px;
     border: 2px solid $sweet-border-color;
     background-color: $sweet-white;
     font-family: "微軟正黑體";
+
     @media (min-width: 768px) {
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+    @media (min-width: 1200px) {
+        // margin: 0 auto;
         padding-left: 42px;
         padding-right: 42px;
     }
@@ -52,6 +198,8 @@ $sweet-blue: blue;
     @media (min-width: 768px) {
         display: flex;
         justify-content: center;
+        padding-left: 42px;
+        padding-right: 42px;
     }
 }
 
@@ -62,7 +210,7 @@ $sweet-blue: blue;
     width: 100%;
     height: 40px;
     max-width: $max-main-container;
-    position: fixed;
+    // position: fixed;
     padding-right: 32px;
     padding-left: 32px;
     background-color: #fff;
@@ -71,8 +219,8 @@ $sweet-blue: blue;
     @media (min-width: 768px) {
         display: flex;
         justify-content: space-between;
-        padding-left: 42px;
-        padding-right: 42px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -140,10 +288,14 @@ $sweet-blue: blue;
     position: relative;
     background: url(../images/sweet/sweetast-00.jpg) no-repeat;
     background-size: cover;
+    max-width: $max-main-container;
     @media (min-width: 768px) {
         width: 100%;
         height: 496px;
         margin: 12px auto 60px;
+    }
+    @media (min-width: 1200px) {
+        width: 100%;
     }
 }
 
@@ -375,13 +527,13 @@ $sweet-blue: blue;
 }
 
 .contact-us {
-    margin-top: 30px;
+    // margin: 30px auto 0;
     padding: 32px;
     background-color: $sweet-green;
     @media (min-width: 768px) {
         display: flex;
-        justify-content: space-between;
-        padding: 32px 120px;
+        justify-content: center;
+        padding: 32px 42px;
     }
 }
 
@@ -408,9 +560,11 @@ $sweet-blue: blue;
     height: 56px;
     margin-top: 30px;
     @media (min-width: 768px) {
-        width: 380px;
+        justify-content: space-between;
+        width: 360px;
         margin-top: 0;
     }
+
     background-color: #eaf0ed;
     color: $sweet-green;
 }
@@ -451,20 +605,33 @@ $sweet-blue: blue;
     height: 56px;
 }
 
-footer {
+.sweet-footer {
+    margin: 0 auto;
     width: 100%;
     height: 320px;
     padding: 30px;
     position: relative;
     background-color: #eaf0ed;
     color: $sweet-green;
+
     @media (min-width: 768px) {
         width: 100%;
         height: 340px;
-        padding: 40px 120px;
+        padding: 40px 40px;
+    }
+    @media (min-width: 1200px) {
+        width: 100%;
+        height: 340px;
+
+        // padding: 40px 122px;
     }
 }
 
+.footer-center {
+    position: relative;
+    margin: 0 auto;
+    max-width: $max-main-container;
+}
 .sweet-logo-text {
     width: 176px;
     @media (min-width: 768px) {
@@ -490,7 +657,7 @@ footer {
     @media (min-width: 768px) {
         position: absolute;
         bottom: 10px;
-        right: 120px;
+        right: 32px;
     }
 }
 
@@ -500,7 +667,16 @@ footer {
         display: block;
         width: 64px;
         position: absolute;
-        top: 30px;
-        right: 120px;
+        top: 0;
+        right: 32px;
+    }
+}
+
+.contact-us-center {
+    max-width: $max-main-container;
+    @media (min-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 }
