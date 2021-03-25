@@ -58,7 +58,6 @@ $sweet-yellow: #ffe180;
     height: 65px;
     background-color: $sweet-light-green;
     color: $sweet-green;
-
 }
 
 .cart-buy-style {
@@ -66,8 +65,7 @@ $sweet-yellow: #ffe180;
     height: 65px;
     text-align: center;
     background-color: $sweet-yellow;
-    padding-left: 20px;
-    margin-right: 20px;
+   
 }
 
 .cart-list {
@@ -75,11 +73,11 @@ $sweet-yellow: #ffe180;
 }
 
 .cart-container {
-    padding-top: 100px;
+    // padding-top: 100px;
     @media (min-width: 768px) {
         display: flex;
         align-items: start;
-        margin-top: 0;
+        margin-top˛: 0;
     }
 }
 .cart-item {
@@ -137,10 +135,6 @@ $sweet-yellow: #ffe180;
 
 .right-total {
     width: 100%;
-    @media (min-width: 768px) {
-        width: 300px;
-    }
-    
 }
 
 .right-group {
@@ -148,7 +142,8 @@ $sweet-yellow: #ffe180;
     padding: 16px 28px;
     border: 1px solid  blue;
     @media (min-width: 768px) {
-        width: 300px;
+        padding-left: 42px;
+        padding-right: 42px;
     }
 }
 
