@@ -1,0 +1,99 @@
+$max-main-container: 1200px;
+$sweet-border-color: none;
+$product-gap: 20px;
+
+$sweet-white: #fff;
+$sweet-green: #3f5d45;
+$sweet-light-green: #eaf0ed;
+$sweet-blue: blue;
+$sweet-yellow: #ffe180;
+
+.a-link-style {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon-shopping,
+.icon-menu {
+    font-size: 24px;
+    color: #3f5d45;
+}
+
+.sweet-header {
+    width: 100%;
+    height: 88px;
+    padding-top: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 2px solid $sweet-border-color;
+    background-color: $sweet-white;
+    z-index: 100;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    max-width: $max-main-container;
+    padding-right: 32px;
+    padding-left: 32px;
+    background-color: #fff;
+    border: 2px solid $sweet-white;
+    z-index: 100;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.btn-hamburger-menu {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.logo-text-dark {
+    width: 114px;
+    height: 18px;
+    background: url(../images/sweet/logotype-sm-dark.svg) no-repeat;
+    font-size: 0;
+    @media (min-width: 768px) {
+        width: 220px;
+        height: 40px;
+        background-image: url(../images/sweet/logo-all-dark.svg);
+    }
+}
+
+.header-navbar {
+    display: none;
+    padding: 10px;
+    color: $sweet-green;
+    @media (min-width: 768px) {
+        display: flex;
+        margin-left: auto;
+        margin-right: 48px;
+    }
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 60px;
+}
+
+.header-logo {
+    width: 100%;
+    height: 500px;
+    background-color: $sweet-border-color;
+    border: none;
+    top: 100px;
+}

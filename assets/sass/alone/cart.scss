@@ -12,12 +12,13 @@ $sweet-yellow: #ffe180;
     border: 1px solid $sweet-light-green;
 }
 
-.abc1 {
-    // border: 1px solid blue;
+.cart-menu {
     @media (min-width: 768px) {
         width: 100%;
         display: flex;
         align-items: center;
+
+        // border: 1px solid blue;
     }
 }
 
@@ -74,8 +75,10 @@ $sweet-yellow: #ffe180;
 
 .cart-left-product {
     @media (min-width: 768px) {
+        overflow: hidden;
         margin-right: 20px;
-        width: 680px;
+        //width: 50%;
+        flex: 1 1 auto;
     }
 }
 
@@ -124,7 +127,8 @@ $sweet-yellow: #ffe180;
 
 .cart-container {
     // padding-top: 100px;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
+        overflow: hidden;
         display: flex;
         justify-content: space-between;
         align-items: start;
@@ -141,18 +145,16 @@ $sweet-yellow: #ffe180;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
-        // border-bottom: 1px solid $sweet-light-green;
     }
-    // align-items: center;
 }
 .cart-card {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    // justify-content: flex-start;
     @media (min-width: 768px) {
         display: flex;
-        justify-content: space-around;
+        // justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
 
         // display: block;
@@ -169,6 +171,13 @@ $sweet-yellow: #ffe180;
         align-items: center;
         justify-content: space-around;
         // border: 1px solid red;
+    }
+}
+
+.product-text {
+    @media (min-width: 768px) {
+        min-width: 100px;
+        margin-right: 10px;
     }
 }
 .cart-img {
@@ -220,9 +229,11 @@ $sweet-yellow: #ffe180;
 }
 
 .right-total {
-    width: 100%;
-    @media (min-width: 768px) {
+    //width: 100%;
+    @media (min-width: 1024px) {
+        flex-shrink: 0;
         width: 300px;
+        // min-width: 300px;
     }
 }
 
@@ -305,99 +316,99 @@ $sweet-yellow: #ffe180;
     }
 }
 
-.sweet-header {
-    width: 100%;
-    height: 88px;
-    padding-top: 30px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    border: 2px solid $sweet-border-color;
-    background-color: $sweet-white;
-    z-index: 100;
-    @media (min-width: 768px) {
-        display: flex;
-        justify-content: center;
-        padding-left: 42px;
-        padding-right: 42px;
-    }
-}
+// .sweet-header {
+//     width: 100%;
+//     height: 88px;
+//     padding-top: 30px;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     border: 2px solid $sweet-border-color;
+//     background-color: $sweet-white;
+//     z-index: 100;
+//     @media (min-width: 768px) {
+//         display: flex;
+//         justify-content: center;
+//         padding-left: 42px;
+//         padding-right: 42px;
+//     }
+// }
 
-.header-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    max-width: $max-main-container;
-    // position: fixed;
-    padding-right: 32px;
-    padding-left: 32px;
-    background-color: #fff;
-    border: 2px solid $sweet-white;
-    z-index: 100;
-    @media (min-width: 768px) {
-        display: flex;
-        justify-content: space-between;
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
+// .header-wrapper {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     width: 100%;
+//     height: 40px;
+//     max-width: $max-main-container;
+//     // position: fixed;
+//     padding-right: 32px;
+//     padding-left: 32px;
+//     background-color: #fff;
+//     border: 2px solid $sweet-white;
+//     z-index: 100;
+//     @media (min-width: 768px) {
+//         display: flex;
+//         justify-content: space-between;
+//         padding-left: 0;
+//         padding-right: 0;
+//     }
+// }
 
-.btn-hamburger-menu {
-    @media (min-width: 768px) {
-        display: none;
-    }
-}
+// .btn-hamburger-menu {
+//     @media (min-width: 768px) {
+//         display: none;
+//     }
+// }
 
-.logo-text-dark {
-    width: 114px;
-    height: 18px;
-    background: url(../images/sweet/logotype-sm-dark.svg) no-repeat;
-    font-size: 0;
-    @media (min-width: 768px) {
-        width: 220px;
-        height: 40px;
-        background-image: url(../images/sweet/logo-all-dark.svg);
-    }
-}
+// .logo-text-dark {
+//     width: 114px;
+//     height: 18px;
+//     background: url(../images/sweet/logotype-sm-dark.svg) no-repeat;
+//     font-size: 0;
+//     @media (min-width: 768px) {
+//         width: 220px;
+//         height: 40px;
+//         background-image: url(../images/sweet/logo-all-dark.svg);
+//     }
+// }
 
-.header-navbar {
-    display: none;
-    padding: 10px;
-    color: $sweet-green;
-    @media (min-width: 768px) {
-        display: flex;
-        margin-left: auto;
-        margin-right: 48px;
-    }
-}
+// .header-navbar {
+//     display: none;
+//     padding: 10px;
+//     color: $sweet-green;
+//     @media (min-width: 768px) {
+//         display: flex;
+//         margin-left: auto;
+//         margin-right: 48px;
+//     }
+// }
 
-.nav-item:not(:last-child) {
-    margin-right: 60px;
-}
+// .nav-item:not(:last-child) {
+//     margin-right: 60px;
+// }
 
-.header-logo {
-    width: 100%;
-    height: 500px;
-    background-color: $sweet-border-color;
-    border: none;
-    top: 100px;
-}
+// .header-logo {
+//     width: 100%;
+//     height: 500px;
+//     background-color: $sweet-border-color;
+//     border: none;
+//     top: 100px;
+// }
 
-.nav-bar {
-    display: flex;
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    background-color: #fff;
-}
+// .nav-bar {
+//     display: flex;
+//     height: 50px;
+//     width: 100%;
+//     position: fixed;
+//     background-color: #fff;
+// }
 
-.icon-shopping,
-.icon-menu {
-    font-size: 24px;
-    color: #3f5d45;
-}
+// .icon-shopping,
+// .icon-menu {
+//     font-size: 24px;
+//     color: #3f5d45;
+// }
 
 .sweet-banner {
     display: flex;
@@ -599,13 +610,10 @@ $sweet-yellow: #ffe180;
     background-color: $sweet-light-green;
 }
 
-.a-link-style {
-    text-decoration: none;
-    color: inherit;
-    // border: 1px solid red;
-    //@include rb;
-    //font-size: rem(18px);
-}
+// .a-link-style {
+//     text-decoration: none;
+//     color: inherit;
+// }
 
 .choice-box {
     display: flex;
@@ -653,6 +661,7 @@ $sweet-yellow: #ffe180;
     @media (min-width: 768px) {
         display: flex;
         justify-content: center;
+        margin-top: 39px;
         padding: 32px 42px;
     }
 }
