@@ -1,6 +1,5 @@
-@import '_starter';
+@import "_starter";
 $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 46, 48, 52, 56, 60, 64);
-
 
 @each $breakpoint in map-keys($grid-breakpoints) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
@@ -9,7 +8,7 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
     @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
         @each $fz in $fontsize-list {
             .fz#{$infix}-#{$fz}px {
-                font-size: rem(1px*$fz) !important;
+                font-size: rem(1px * $fz) !important;
 
                 @if $fz>18 and $fz < 24 {
                     $lh: 1.44;
@@ -29,11 +28,11 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
 
         @for $i from 1 through 16 {
             .h#{$infix}-#{$i} {
-                height: $i*8px !important;
+                height: $i * 8px !important;
             }
 
             .w#{$infix}-#{$i} {
-                width: $i*8px !important;
+                width: $i * 8px !important;
             }
         }
 
@@ -63,8 +62,6 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
     }
 }
 
-
-
 .rb {
     border: 1px red solid !important;
 }
@@ -74,15 +71,15 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
 }
 
 .bg-black-50 {
-    background-color: rgba(#000, .5);
+    background-color: rgba(#000, 0.5);
 }
 
 .bg-white-90 {
-    background-color: rgba(#fff, .9);
+    background-color: rgba(#fff, 0.9);
 }
 
 .bg-primary-20 {
-    background-color: rgba($primary, .2) !important;
+    background-color: rgba($primary, 0.2) !important;
 }
 
 .bg-gray-200 {
@@ -90,7 +87,7 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
 }
 
 .bg-default-80 {
-    background-color: rgba($default, .8);
+    background-color: rgba($default, 0.8);
 }
 
 .bg-notice {
@@ -98,7 +95,7 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
 }
 
 .text-shadow {
-    text-shadow: 0 0 10px rgba(#000, .2);
+    text-shadow: 0 0 10px rgba(#000, 0.2);
 }
 
 .max-readable-friendly {
@@ -157,7 +154,7 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
     box-shadow: rgba(#000, 0.75) 0px 4px 4px 0px;
 }
 
-[class*='line-clamp'] {
+[class*="line-clamp"] {
     overflow: hidden;
     display: block;
     display: -webkit-box;
@@ -175,11 +172,9 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
     max-height: 72px !important;
 }
 
-
 .overflow-hidden {
     overflow: hidden;
 }
-
 
 .miw-0 {
     min-width: 0;
@@ -192,7 +187,6 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
     width: 100%;
     height: 100%;
 }
-
 
 .absolute-center {
     position: absolute;
@@ -225,7 +219,6 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
     left: 0;
 }
 
-
 .pointer-events-none {
     pointer-events: none;
 }
@@ -238,13 +231,11 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
     z-index: 100;
 }
 
-
 .lh-initial {
     line-height: initial !important;
 }
 
-
-.child-rb>* {
+.child-rb > * {
     @include rb;
 }
 
@@ -256,18 +247,17 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
     object-fit: contain !important;
 }
 
-
 .mb-0-last:last-child {
     margin-bottom: 0 !important;
 }
 
 .trs-all {
-    transition: transform .3s, opacity .3s;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .hover-bg-secondary-10 {
     @include media-breakpoint-up(xl) {
-        transition: all .3s;
+        transition: all 0.3s;
 
         &:hover,
         &:focus {
@@ -333,7 +323,7 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
         opacity: 0;
         -webkit-filter: blur(5px);
         filter: blur(5px);
-        transition: opacity .5s, filter .5s, -webkit-filter .5s, transform .3s;
+        transition: opacity 0.5s, filter 0.5s, -webkit-filter 0.5s, transform 0.3s;
 
         &.lazyloaded {
             opacity: 1;
@@ -344,13 +334,9 @@ $fontsize-list: (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30, 32, 34,
 }
 
 .user-select-none {
-    user-select: none
+    user-select: none;
 }
 
 .rotate-270deg {
-    transform: rotate(270deg)
-}
-.abc {
-    border: 10px solid #000;
-    background: blue;
+    transform: rotate(270deg);
 }

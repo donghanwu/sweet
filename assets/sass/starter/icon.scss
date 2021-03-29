@@ -19,7 +19,7 @@ i.icon {
     }
 }
 
-$list: ("menu", "heart-test", "video", "photo", "info", "triangle", "close", "star", "shopping", "mail","delete");
+$list: ("menu", "heart-test", "video", "photo", "info", "triangle", "close", "star", "shopping", "mail", "delete");
 
 @each $var in $list {
     .icon-#{$var}:before {

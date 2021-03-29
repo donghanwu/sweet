@@ -1,0 +1,153 @@
+@import "_starter";
+.contact-us {
+    padding: 32px;
+    background-color: $sweet-green;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        margin-top: 39px;
+        padding: 32px 42px;
+    }
+}
+
+.contact-us-center {
+    max-width: $max-main-container;
+    @media (min-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #eaf0ed;
+}
+
+.logo-light {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.sweet-mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    margin-top: 30px;
+    @media (min-width: 768px) {
+        justify-content: space-between;
+        width: 360px;
+        margin-top: 0;
+    }
+
+    background-color: #eaf0ed;
+    color: $sweet-green;
+}
+
+.mail-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.mail-icon {
+    display: flex;
+    justify-content: center;
+    width: 64px;
+    height: 56px;
+}
+
+.mail-input {
+    width: 80%;
+    font-size: 30px;
+    color: $sweet-green;
+}
+
+.arrow {
+    width: 64px;
+    height: 56px;
+    background-color: #ffe180;
+    color: $sweet-green;
+    text-align: center;
+}
+
+.icon-mail {
+    font-size: 18px;
+    background-color: #eaf0ed;
+    color: $sweet-green;
+    width: 64px;
+    height: 56px;
+}
+
+.sweet-footer {
+    margin: 0 auto;
+    width: 100%;
+    height: 320px;
+    padding: 30px;
+    position: relative;
+    background-color: #eaf0ed;
+    color: $sweet-green;
+    @media (min-width: 768px) {
+        width: 100%;
+        height: 340px;
+        padding: 40px 40px;
+    }
+    @media (min-width: 1200px) {
+        width: 100%;
+        height: 340px;
+    }
+}
+
+.footer-center {
+    position: relative;
+    margin: 0 auto;
+    max-width: $max-main-container;
+}
+
+.sweet-logo-text {
+    width: 176px;
+    @media (min-width: 768px) {
+        padding-bottom: 65px;
+    }
+}
+
+.social-box {
+    width: 200px;
+}
+
+.icon-social {
+    width: 32px;
+    height: 32px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.copyright {
+    margin-top: 10px;
+    @media (min-width: 768px) {
+        position: absolute;
+        bottom: 10px;
+        right: 32px;
+    }
+}
+
+.sm-footer-text {
+    display: none;
+    @media (min-width: 768px) {
+        display: block;
+        width: 64px;
+        position: absolute;
+        top: 0;
+        right: 32px;
+    }
+}
